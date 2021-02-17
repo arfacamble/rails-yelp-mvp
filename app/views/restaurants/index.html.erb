@@ -1,5 +1,9 @@
 <div class="container mt-4">
-  <h1 class='text-center'>Restaurants</h1>
+  <div class="d-flex justify-content-between">
+    <p> </p>
+    <h1 class='text-center'>Restaurants</h1>
+    <%= link_to "Add Restaurant", new_restaurant_path, class: "btn btn-primary align-self-center" %>
+  </div>
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant-card">
       <h2><%= restaurant.name %></h2>
