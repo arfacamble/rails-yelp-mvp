@@ -1,6 +1,7 @@
 <div class="container">
   <h1 class="text-center mt-4"><%= @restaurant.name %></h1>
-  <p>Find me in at <%= @restaurant.address %></p>
+  <%= link_to 'Back to list', restaurants_path, class: 'btn btn-danger back-link' %>
+  <p>Find me at <%= @restaurant.address %></p>
   <% @restaurant.reviews.each do |review| %>
     <div class="review-card">
       <% review.rating.times do %><%= '⭐️' %><% end %>

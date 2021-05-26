@@ -7,7 +7,9 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render :new
+      raise
+      redirect_to restaurant_path(@restaurant), { notice: 'incorrect form entry', class: 'alert alert-danger' }
+      # render :new
     end
   end
 
